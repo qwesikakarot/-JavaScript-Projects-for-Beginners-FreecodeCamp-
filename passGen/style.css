@@ -1,0 +1,45 @@
+html,
+body {
+  height: 100%;
+  display: flex;
+justify-content: center;
+align-items: center ;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+text-align: center;
+}
+
+
+
+
+
+
+.color{
+display: flex;
+justify-content: center;
+align-items: center ;
+flex-direction: column;
+border: 3px dashed black;
+width: 600px;
+height: auto;
+  }
+
+  button{
+      margin-bottom: 20px;
+      padding: 7px;
+      border-radius: 5px;
+  }
+
+  button:hover{
+    background: rgb(2,0,36);
+    background: linear-gradient(291deg, rgba(2,0,36,1) 0%, rgba(52,52,173,1) 35%, rgba(0,212,255,1) 100%); 
+  }
+
+
+
+
+
+section,
+#Password{
+    border: 2px solid black;
+    padding: 15px;
+}
