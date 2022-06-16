@@ -7,11 +7,13 @@ _In the responsive Navbar project, it was focused on using JS to create a hambur
 
 -[Color Picker](https://qwesikakarot.github.io/-JavaScript-Projects-for-Beginners-FreecodeCamp-/colorpicker)
 
-[Counter](https://qwesikakarot.github.io/-JavaScript-Projects-for-Beginners-FreecodeCamp-/counter)
+-[Counter](https://qwesikakarot.github.io/-JavaScript-Projects-for-Beginners-FreecodeCamp-/counter)
 
 -[Password Generator](https://qwesikakarot.github.io/-JavaScript-Projects-for-Beginners-FreecodeCamp-/passGen)
 
--[Responsive Navbar](https://qwesikakarot.github.io/-JavaScript-Projects-for-Beginners-FreecodeCamp-/responsiveNav "Reduce size of your browser to see hamburger menu or view in mobile or tablet")
+
+### Reduce size of your browser to see hamburger menu or view in mobile or tablet
+-[Responsive Navbar](https://qwesikakarot.github.io/-JavaScript-Projects-for-Beginners-FreecodeCamp-/responsiveNav)
 
 
 
