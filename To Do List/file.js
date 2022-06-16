@@ -1,42 +1,69 @@
-let tasks = document.getElementById('myList');
-let node = document.createElement('li');
-let btn = document.getElementById("btn");
+let button= document.getElementById("enter")
+
+let newitem= document.getElementById("userinput");
+
+let ul= document.querySelector("ul");
+
+let list= document.getElementsByTagName("li");
+
+let del= document.getElementsByClassName("delete");
+
+// register actions initially on existing elements
+for( let i=0;i<del.length;i++){
+	del[i].addEventListener("click", deleteListElement);
+}
+
+for(let i=0;i< list.length ;i++){
+	list[i].addEventListener("click", liClick);
+}
 
 
-
-
-const addedtasks = [];
-const tasksCompleted = [];
-
-//let inputTaks = document.getElementById('input').value;
-
-//function to add tasks to addedtasks
-
-function addTask() {
-    let inputTaks = document.getElementById('input').value;
-    addedtasks.push(inputTaks);
-    node.textContent = addedtasks;
-     tasks.appendChild(node);
-    //document.getElementById('myList').innerHTML = addedtasks ;
-   
+function deleteListElement(){
+  this.parentElement.remove(); // remove parent, since button is child
 
 }
 
-btn.addEventListener('click', addTask);
-//addTask()
+function liClick(){
+	this.classList.toggle("done");
+}
 
-//function to delete a specific item from the added task and push to taskscompleted
+function inputLength(){
+	return newitem.value.length;
+}
 
-/* const completeTask = () =>{ 
-     tasksComplete.push(addedtasks)
-     
 
+
+function createListElement(){
+	let li= document.createElement("li");
+ 		li.appendChild(document.createTextNode(newitem.value));
+ 		
+ 		newitem.value=" "
+ 	let delbutt=document.createElement("button");
+ 	delbutt.appendChild(document.createTextNode("Delete"));
+ 	li.appendChild(delbutt);
+ 	ul.appendChild(li);
+ 	
+  // Register action on newly added elements
+  li.addEventListener("click", liClick);
+  delbutt.addEventListener("click", deleteListElement);
+ 	 	
+}
+
+function addListAfterClick(){
+
+	if(inputLength()>0){
+		createListElement();
+	}
+ 
+}
+
+function addListAfterEnter(event){
+	if(inputLength()>0 && event.keyCode===13){
+
+		createListElement()
+	}
 
 }
-*/
-//completeTask()
 
-
-
-//console.log(tasksCompleted)
-//console.log(addedtasks)
+button.addEventListener("click",addListAfterClick );
+newitem.addEventListener("keypress", addListAfterEnter);
